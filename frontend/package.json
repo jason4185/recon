@@ -1,0 +1,51 @@
+{
+  "name": "recon-demo",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite dev",
+    "build": "vite build",
+    "start": "vite preview",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint .",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "dependencies": {
+    "@genlayer/transaction-kit": "0.1.0-rc.2",
+    "@genlayer/transaction-kit-react": "0.1.0-rc.2",
+    "@fontsource-variable/manrope": "5.3.0",
+    "@radix-ui/react-dialog": "1.3.1",
+    "@tanstack/react-query": "5.101.1",
+    "@tanstack/react-router": "1.170.45",
+    "@tanstack/react-start": "1.169.3",
+    "class-variance-authority": "0.7.1",
+    "clsx": "2.1.1",
+    "genlayer-js": "2.0.0-rc.1",
+    "lucide-react": "1.59.0",
+    "motion": "14.3.0",
+    "react": "19.3.1",
+    "react-dom": "19.3.1",
+    "sonner": "2.0.8",
+    "tailwind-merge": "3.7.0",
+    "viem": "2.56.5"
+  },
+  "devDependencies": {
+    "@eslint/js": "10.0.1",
+    "@tailwindcss/vite": "4.3.3",
+    "@testing-library/dom": "10.4.1",
+    "@testing-library/react": "16.3.3",
+    "@types/node": "26.0.0",
+    "@types/react": "19.3.0",
+    "@types/react-dom": "19.3.0",
+    "@vitejs/plugin-react": "6.1.2",
+    "eslint": "10.13.0",
+    "eslint-plugin-react-hooks": "7.1.1",
+    "jsdom": "30.1.3",
+    "tailwindcss": "4.3.3",
+    "typescript": "6.0.3",
+    "typescript-eslint": "8.71.2",
+    "vite": "8.3.4",
+    "vitest": "5.0.5"
+  }
+}

@@ -1,0 +1,30 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Frontend dependencies and builds
+node_modules/
+.output/
+.vinxi/
+.tanstack/
+.wrangler/
+dist/
+.vercel/
+.netlify/
+coverage/
+
+# Environment and local configuration
+.env
+.env.*
+!.env.example
+
+# Local tooling and logs
+.DS_Store
+*.log
+.pytest_cache/
+.coverage
+*.tmp
+*.temp
+*.swp

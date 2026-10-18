@@ -1,0 +1,67 @@
+@import "tailwindcss";
+
+:root {
+  color-scheme: dark;
+  --bg: #08090c;
+  --bg-soft: #0d0e12;
+  --surface: rgba(19, 20, 25, 0.84);
+  --surface-strong: #15161b;
+  --surface-raised: #1a1b21;
+  --muted: #9899a4;
+  --muted-strong: #b7b8c1;
+  --accent: #beb2ff;
+  --accent-strong: #cec5ff;
+  --success: #8fd8b6;
+  --warning: #efc987;
+  --danger: #f4a6a6;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; background: var(--bg); }
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background: var(--bg);
+  color: #f7f7fa;
+  font-family: 'Manrope Variable', ui-sans-serif, system-ui, sans-serif;
+  font-feature-settings: "ss01" 1, "ss02" 1, "cv11" 1;
+  -webkit-font-smoothing: antialiased;
+}
+
+button, input, textarea, select { font: inherit; }
+button, a { -webkit-tap-highlight-color: transparent; }
+::selection { background: rgba(190, 178, 255, .28); color: white; }
+
+.page-shell { width: min(1240px, calc(100% - 40px)); margin-inline: auto; }
+.marketing-shell { width: min(1320px, calc(100% - 40px)); margin-inline: auto; }
+.eyebrow { font-size: 11px; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; color: var(--accent); }
+.text-balance { text-wrap: balance; }
+.subtle-grid {
+  background-image: linear-gradient(rgba(255,255,255,.025) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.025) 1px, transparent 1px);
+  background-size: 72px 72px;
+  mask-image: linear-gradient(to bottom, black, transparent 85%);
+}
+.noise::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: .025;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.7'/%3E%3C/svg%3E");
+}
+.hide-scrollbar { scrollbar-width: none; }
+.hide-scrollbar::-webkit-scrollbar { display: none; }
+
+@media (max-width: 640px) {
+  .page-shell, .marketing-shell { width: min(100% - 24px, 1240px); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    scroll-behavior: auto !important;
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .01ms !important;
+  }
+}
